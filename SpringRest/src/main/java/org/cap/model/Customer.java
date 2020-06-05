@@ -9,12 +9,22 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="customer")
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Customer implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@XmlAttribute
 	private int customerId;
 	@XmlElement
 	private String customerName;
+	
+	
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	public Customer(int customerId, String customerName) {
 		super();

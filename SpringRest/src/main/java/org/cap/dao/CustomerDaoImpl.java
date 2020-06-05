@@ -1,3 +1,4 @@
+
 package org.cap.dao;
 
 import java.util.List;
@@ -9,6 +10,13 @@ import org.springframework.stereotype.Repository;
 @Repository("customerDao")
 
 public class CustomerDaoImpl<T> {
+	
+	public CustomerDaoImpl() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
 	public CustomerEntityList getCustomers()
 	{
 		CustomerEntityList cList = new CustomerEntityList();
