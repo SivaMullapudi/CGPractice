@@ -1,10 +1,9 @@
 package com.cap.SpringBootPractise;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cap.SpringBootPractise.bean.Customer;
@@ -22,12 +21,13 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = "/register")
-	public String register() {
+	public String register(Model model) {
+		model.addAttribute("customer", new Customer());
 		return "register";
 	}
 
-	@RequestMapping(value = "/customer", method = RequestMethod.GET)
-	public String register(@ModelAttribute("customer") Customer customer,BindingResult bindingResult) {
+	@RequestMapping(value = "/customer")
+	public String register(@ModelAttribute("customer") Customer customer) {
 		System.out.println(" First Name :" + customer.getFirstName() + " Last Name :" + customer.getLastName());
 		if (null != customer.getFirstName() && null != customer.getLastName())
 			return "registerSuccess";

@@ -8,7 +8,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 </head>
 <body>
-	<form:form action="/api/customer" method="post" modelAttribute="customer">
+	<form:form action="customer"  modelAttribute="customer">
     	<table>
     		<th colspan="3">
     		</th>
@@ -22,7 +22,7 @@
     		</tr>
     		<tr>
     			<td></td>
-    			<td><input type="submit" value="save"/></td>
+    			<td><input type="submit" name="save" value="save"/></td>
     		</tr>
     		
     	</table>
