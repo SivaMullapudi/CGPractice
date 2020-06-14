@@ -7,6 +7,6 @@
 <title>Login Success</title>
 </head>
 <body>
-	<h3>Successfully logged in</h3>
+	<h3>Successfully Registered</h3>
 </body>
 </html>
